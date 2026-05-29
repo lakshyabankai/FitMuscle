@@ -24,3 +24,21 @@ function ownerPhone(){
 window.location.href = "tel:+91 9140661828";
 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            const isExpanded = card.classList.contains('expanded');
+
+            cards.forEach(function(otherCard) {
+                otherCard.classList.remove('expanded');
+            });
+
+            if (!isExpanded) {
+                card.classList.add('expanded');
+            }
+        });
+    });
+});
