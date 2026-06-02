@@ -657,3 +657,24 @@ footer span {
     line-height: 1.7;
     font-size: 15px;
 }
+
+@media (max-width: 600px) { 
+    .transformations h2, .services h2 {
+        font-size: 1.75em;
+    }
+    .trainer h2 {
+        font-size: 2.5em;
+    }
+    .services h3 {
+        font-size: 1.25em;
+    }
+
+    .hero h1 {
+        font-size: 2.25em;
+        margin-top: 20px;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+
+}
