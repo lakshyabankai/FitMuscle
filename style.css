@@ -7,11 +7,13 @@
 
 html {
     user-select: none;
+    overflow-x: hidden;
 }
 
 body {
     background: black;
     color: white;
+    overflow-x: hidden;
 }
 
 header {
@@ -70,6 +72,121 @@ nav ul li a:hover {
     color: #fff;
     background: rgba(255, 79, 79, 0.16);
     transform: translateY(-1px);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #ff4f4f;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(15px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100vw;
+        text-align: center;
+        transition: left 0.3s ease;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+        transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background: rgba(255, 79, 79, 0.2);
+        transform: none;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 14px 4%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        display: block;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
 }
 
 
@@ -213,6 +330,45 @@ button:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .trainer-box {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .trainer-box img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 16/21;
+    }
+
+    .trainer-info {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .trainer-info h3 {
+        font-size: 32px;
+    }
+
+    .trainer-info p {
+        font-size: 16px;
+    }
+
+    .trainer-meta {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 @media (max-width: 600px) {
     .cards {
         gap: 18px;
@@ -251,6 +407,33 @@ button:hover {
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px;
+    }
+
+    .trainer-box {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .trainer-box img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        aspect-ratio: 16/21;
+    }
+
+    .trainer-info h3 {
+        font-size: 28px;
+    }
+
+    .trainer-info p {
+        font-size: 15px;
+    }
+
+    .trainer-meta div,
+    .social-links a {
+        font-size: 13px;
+        padding: 10px 14px;
     }
 }
 
@@ -473,4 +656,25 @@ footer span {
     color: #c9c9c9;
     line-height: 1.7;
     font-size: 15px;
+}
+
+@media (max-width: 600px) { 
+    .transformations h2, .services h2 {
+        font-size: 1.75em;
+    }
+    .trainer h2 {
+        font-size: 2.5em;
+    }
+    .services h3 {
+        font-size: 1.25em;
+    }
+
+    .hero h1 {
+        font-size: 2.25em;
+        margin-top: 20px;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+
 }
