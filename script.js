@@ -5,9 +5,12 @@
 // }
 function joinGym(){
 
-window.open(
-"https://wa.me/9140661828?text=Hello%20I%20want%20to%20join%20The%20Fit%20Muscle%20Gym",
-"_blank"
+window.open(<a href="https://wa.me/919140661828?text=🏋️‍♂️%20Hello!%20I%20want%20to%20join%20The%20Fit%20Muscle%20Gym."
+   target="_blank">
+   Join Now
+</a>
+// "https://wa.me/9140661828?text=Hello%20I%20want%20to%20join%20The%20Fit%20Muscle%20Gym",
+// "_blank"
 );
 
 }
