@@ -5,7 +5,7 @@
 // }
 function joinGym(){
 
-window.open(<a href="https://wa.me/919140661828?text=🏋️‍♂️%20Hello!%20I%20want%20to%20join%20The%20Fit%20Muscle%20Gym."
+window.open(<a href="https://wa.me/9140661828?text=🏋️‍♂️%20Hello!%20I%20want%20to%20join%20The%20Fit%20Muscle%20Gym."
    target="_blank">
    Join Now
 </a>
@@ -17,7 +17,7 @@ window.open(<a href="https://wa.me/919140661828?text=🏋️‍♂️%20Hello!%2
 function contactOwner(){
 
 window.open(
-"https://wa.me/919876543210?text=Hello%20I%20want%20information%20about%20Muscle%20Fit%20Gym",
+"https://wa.me/9140661828?text=Hello%20I%20want%20information%20about%20Muscle%20Fit%20Gym",
 "_blank"
 );
 
